@@ -45,10 +45,9 @@ public class HomeController {
         // return type String 에서 List<Member> 로 수정하면.
         // Gson 없이 @RestController 자체에서도 json 으로 응답을 하므로 문제가 안됨
         //-------------------------------------------------------------------
-        List<Member> members = memberService.findAll();
         //Gson gson = new Gson();
         //return gson.toJson(members);
         //return members.toString();
-        return members;
+        return memberService.findAll();
     }
 }
