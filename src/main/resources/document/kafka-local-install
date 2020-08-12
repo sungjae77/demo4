@@ -9,15 +9,18 @@ https://kok202.tistory.com/104
 
 
 ———————————————————————————————————————————————
-설치 및 서정
+아래 주석 해제
 ———————————————————————————————————————————————
-server.properties 파일 주석해제
+server.properties 파일의 아래 주석해제
 advertised.listeners=PLAINTEXT://localhost:9092
 
 
+———————————————————————————————————————————————
 
+———————————————————————————————————————————————
 ./zookeeper-server-start.sh -daemon ../config/zookeeper.properties
 ./kafka-server-start.sh ../config/server.properties
 
 ./kafka-topics.sh --create --zookeeper localhost:2181 --replication-factor 1 --partitions 1 --topic test
+./kafka-console-producer.sh --broker-list localhost:9092 --topic test
 ./kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic test --from-beginning
