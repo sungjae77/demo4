@@ -1,4 +1,4 @@
-package com.tmax.dbps.bigdata.kafka;
+package com.example.demo4;
 
 import org.apache.kafka.clients.producer.KafkaProducer;
 import org.apache.kafka.clients.producer.ProducerRecord;
@@ -22,7 +22,7 @@ public class DemoProducer{
         producerProps.put("buffer.memory",24568545);
         KafkaProducer<String, String> producer = new KafkaProducer<String,String>(producerProps);
 
-        for (int i=0;i<20;i++){
+        for (int i=0;i<100;i++){
             ProducerRecord data = new ProducerRecord<String,String>("test","Hello this is record" + i);
             Future<RecordMetadata> recordMetadata = producer.send(data);
         }
