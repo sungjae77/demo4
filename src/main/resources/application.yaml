@@ -1,9 +1,5 @@
 spring:
   datasource:
-#    url: jdbc:mariadb://localhost:3306/nextmagic
-#    driver-class-name: org.mariadb.jdbc.Driver
-#    username: root
-#    password: qhdkscjfwj77!#
     url: jdbc:mariadb://testdb.cvsmfe2ldref.ap-northeast-2.rds.amazonaws.com:3306/nextmagic?ssl=true
     driver-class-name: org.mariadb.jdbc.Driver
     username: wisdomguy

@@ -14,6 +14,5 @@ public class Contract {
     String term;
     String document; //게약서 완성본 (DB 박으로 뺄것..)
     String receiving; //수납정보
-    String aaa;
 
 }
